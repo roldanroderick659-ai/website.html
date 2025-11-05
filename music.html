@@ -1,0 +1,83 @@
+ <!DOCTYPE html>
+<html>
+    <style>
+          body {
+      background: linear-gradient(white,rgb(206, 97, 183));
+      height: 100%;
+  }
+
+        
+                         .gradient-text {
+background: linear-gradient(to top,rgb(201, 51, 179), rgb(205, 161, 212));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-align: center;
+      }
+    
+    
+    header {
+       background: white;
+       padding: 5px;
+       
+   }
+
+   h1 {
+    text-align: center;
+   }
+
+   video {
+    margin-top: 10px;
+    margin-left: 300px;
+    border: 5px solid rgb(218, 46, 178);
+    border-radius: 10px;
+
+   }
+
+         button {
+    border: 5px solid rgb(177, 69, 131);
+width: 150px;
+height: 50px;
+   margin-bottom: 50px;
+   margin-left: 1000px;
+   }
+
+
+   .button span {
+    font-size: 20px;
+    top: 50%;
+    right: 50%;
+    font-weight: bold;
+    cursor: pointer;
+   }
+
+   button:hover {
+    transform: scale(1.1);
+    
+   }
+
+     
+    </style>
+         <header>
+ <h1 class="gradient-text"> HAPPY 25TH MONTHSARY aii!</h1>
+ <center><h2> ILOVEYOU</h2></center> </header>
+
+ <body>
+
+    <h1>This melody reminds me of how love<br>
+    feels when i'm with you</h1>
+
+    <video class="myvid" width="600" controls autoplay loop muted>
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+      <script>
+   window.onload=function() {
+       document.getElementById("myvid").classList.add("show");
+   };
+  </script>
+ 
+
+         <button class="button" onclick="window.location.href='home2.html'">
+  <span>BACK</span>
+ </button>
+ </body>

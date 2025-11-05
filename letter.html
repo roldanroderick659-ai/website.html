@@ -1,0 +1,142 @@
+ <!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width,
+initial-scale=1.0">
+
+       <style>
+
+           body {
+      background: linear-gradient(white,rgb(206, 97, 183));
+      height: 100%;
+   }
+
+                         .gradient-text {
+background: linear-gradient(to top,rgb(201, 51, 179), rgb(205, 161, 212));
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+text-align: center;
+      }
+
+         header {
+      background: white;
+      padding: 5px;
+      
+  }
+
+  #open {
+    display: none;
+  }
+
+  .envelope {
+    width: 100px;
+    height: 70px;
+    background-color: rgb(217, 16, 197);
+    margin: 0 auto;
+    position: relative;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.2;
+    margin-top: 10px;
+  }
+
+  .envelope::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+    border-bottom: 35px solid rgb(252, 252, 252);
+  }
+
+   .message {
+    width: 400px;
+    background: rgb(206, 81, 193);
+    color: rgb(0, 0, 0);
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px
+    rgba(0,0,0,0.2);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 3s;
+    text-align: center;
+    font-family: algerian;
+    
+   }
+
+   #open:checked + label + .message {
+    opacity: 1;
+    transform: translateY(0);
+   }
+
+   label:hover .envelope {
+    transform: scale(1.05);
+   }
+
+      button {
+    border: 5px solid rgb(177, 69, 131);
+width: 150px;
+height: 50px;
+   margin-bottom: 50px;
+   margin-left: 1000px;
+   }
+
+
+   .button span {
+    font-size: 20px;
+    top: 50%;
+    right: 50%;
+    font-weight: bold;
+    cursor: pointer;
+   }
+
+   button:hover {
+    transform: scale(1.1);
+    
+   }
+
+   h1 {
+    text-align: center;
+    margin-top: 15px;
+   }
+
+</style>
+
+     <header>
+ <h1 class="gradient-text"> HAPPY 25TH MONTHSARY aii!</h1>
+ <center><h2> ILOVEYOU</h2></center> </header>
+
+ <body>
+
+     <h1>Click the envelope</h1>
+   
+
+    <input type="checkbox" id="open">
+    <label for="open">
+        <div class="envelope"></div>
+    </label>
+
+    <div class="message">
+
+        Hello aii, i just want to thank you for being <br>
+        such a good girlfriend to me. You've been a <br>
+        caring and thoughtful partner, you deserve a<br>
+        lot of efforts and good treatment.Thank you for<br>
+        giving me chances to prove my self to you. You<br>
+        truly deserve this gift, and i hope we don't just<br>
+        last for a while, but stay together until the end.<br>
+        iloveyou ai, i hope the day comes when we both<br>
+        become successful.
+    </div>
+
+     <button class="button" onclick="window.location.href='home2.html'">
+  <span>BACK</span>
+ </button>
+ 
+  
+ </body>
+ </html>

@@ -1,0 +1,157 @@
+ <!DOCTYPE html>
+<html>
+ <meta charset="UTF-8">
+ <meta name="viewport"
+ content="width=device-width,
+ initial-scale=1.0">
+
+ <style>
+    body {
+        background: linear-gradient(white,rgb(206, 97, 183));
+        height: 100%;
+
+    }
+    .login-box {
+        background: linear-gradient(white,pink);
+        padding: 30px;
+        border-radius: 15px;
+        width: 60%;
+        margin-top: 70px;
+        margin-left: 200px;
+        height: 70%;
+
+    }
+
+    input {
+        width: 50%;
+        padding: 10px;
+        margin-left: 200px ;
+        background: beige;
+    }
+
+    .keypad {
+        display: flexbox; 
+        gap: 10px;
+        margin-left: 150px;
+        margin-top: 20px;
+    }
+
+    button {
+        padding: 15px;
+        border-radius: 10px;
+        width: 30%;
+        border: 5px solid pink;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    button:hover {
+        transform: scale(1.1);
+    }
+    .clear, .enter {
+        background-color: rgb(194, 119, 211);
+    }
+
+    #message {
+        margin-top: 10px;
+        font-weight: bold;
+        font-size:50px;
+        text-align: center;
+    }
+
+                .gradient-text {
+  background: linear-gradient(to top,rgb(201, 51, 179), rgb(205, 161, 212));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+        }
+
+        header{
+            background: white;
+            padding: 5px;
+            
+        }
+ </style>
+ 
+ 
+  <header>
+ <h1 class="gradient-text"> HAPPY 25TH MONTHSARY aii!</h1>
+<center><h2> ILOVEYOU</h2></center> </header>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ <body>
+ 
+ <div class="login-box">
+     <h2> Enter secret PIN to continue</h2>
+     <input type="password" id="pin" readonly
+     placeholder="....">
+     <div class="keypad">
+     <button onclick="press('1')">1</button>
+     <button onclick="press('2')">2</button>
+     <button onclick="press('3')">3</button> <BR>
+     <button onclick="press('4')">4</button>
+     <button onclick="press('5')">5</button>
+     <button onclick="press('6')">6</button> <br>
+     <button onclick="press('7')">7</button>
+     <button onclick="press('8')">8</button>
+     <button onclick="press('9')">9</button> <br>
+     <button onclick="press('0')">0</button>
+
+     <button class="clear"
+     onclick="clearPIN()">Clear</button>
+      <button class="enter"
+ onclick="checkPIN()">Enter</button>
+ </div>
+
+     <p id="message"></p> </div>
+ 
+ <script>
+    let enteredPIN="";
+    function press(num) {
+        if (enteredPIN.length < 6) {
+            enteredPIN += num;
+
+            document.getElementById("pin").value=".".
+            repeat(enteredPIN.length);
+        }
+    }
+
+     function clearPIN() {
+        enteredPIN="";
+        document.getElementById("pin").value="";
+        document.getElementById("message").textContent="";
+         }
+
+
+     function checkPIN() {
+         const correctPIN="101423";
+         const message= document.getElementById("message");
+         
+         if (enteredPIN === correctPIN) {
+             message.style.color="lime"
+             message.textContent="Access Granted!"
+             setTimeout(() => {
+                 window.location.href =
+                 "home2.html";
+             }, 1000);
+         } else {
+             message.style.color="red";
+             message.textContent="Incorrect PIN";
+
+             setTimeout(() => {
+                clearPIN();
+                message.textContent="";
+
+             }, 1500);
+
+            
+         }
+     }
+ </script>
+</body>
+</html>
